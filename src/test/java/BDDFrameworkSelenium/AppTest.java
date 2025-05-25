@@ -47,6 +47,7 @@ public class AppTest {
         WebElement Searchbox = dr.findElement(By.id("twotabsearchtextbox"));
         Searchbox.sendKeys("iphone 15");
         Searchbox.sendKeys(Keys.ENTER);
+        //Wait is used here to handle the delay in loading the results
         List<WebElement> SearchResult = wt.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//h2[@class='a-size-medium a-spacing-none a-color-base a-text-normal']")));
         SearchResult.get(4).click();
     }
